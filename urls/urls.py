@@ -1,9 +1,10 @@
 from django.urls import path
 
-from .views import create_short_url, get_short_url, list_short_urls
+from .views import createShortUrl, getShortUrl, getListShortUrlpagging,getMyListShortUrlpagging
 
 urlpatterns = [
-    path('api/create/', create_short_url, name='create_short_url'),
-    path('api/get-tiny/<str:tiny_url>/', get_short_url, name='get_short_url'),
-    path('api/get-all', list_short_urls, name='list_short_urls'),
+    path('v1/submiturl/', createShortUrl.as_view(), name='create short url'),
+    path('v1/gettiny/<str:tiny_url>/', getShortUrl.as_view(), name='get short url'),
+    path('v1/getall/', getListShortUrlpagging.as_view(), name='list short urls'),
+    path('v1/getMyUrl/', getMyListShortUrlpagging.as_view(), name='My list short urls'),
 ]
