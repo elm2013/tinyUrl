@@ -2,7 +2,7 @@ name : hello
 on: [push]
 jobs:
    my_job: 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: run a echo hello
         run : echo hello from first actions
