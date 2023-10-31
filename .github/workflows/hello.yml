@@ -1,0 +1,8 @@
+name : hello
+on: [push]
+jobs:
+   my_job: 
+    runs-on: ubuntu-18.04
+    steps:
+      - name: run a echo hello
+        run : echo hello from first actions
