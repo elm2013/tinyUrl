@@ -1,0 +1,24 @@
+name : sample
+on: [push]
+jobs:
+   first: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: run a echo hello
+        run : echo hello from first actions
+   two: 
+    runs-on: windows-latest
+    steps:
+      - name: run a echo hello
+        run : echo hello from first actions
+   tree: 
+    runs-on: macos-latest
+    steps:
+      - name: run a echo hello
+        run : echo hello from first actions
+   four: 
+    runs-on: ubuntu-latest
+    needs: [first,two,tree]
+    steps:
+      - name: run a echo hello
+        run : echo hello from first actions
